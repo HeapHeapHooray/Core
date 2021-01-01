@@ -1,0 +1,2 @@
+class ItemNotFoundAtPath(Exception):
+    pass

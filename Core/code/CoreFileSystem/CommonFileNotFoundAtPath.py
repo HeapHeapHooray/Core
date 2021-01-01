@@ -1,0 +1,2 @@
+class CommonFileNotFoundAtPath(Exception):
+    pass
