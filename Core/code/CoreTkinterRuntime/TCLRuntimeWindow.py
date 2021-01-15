@@ -19,7 +19,7 @@ class TCLRuntimeWindow:
         system_info = CoreSystem.System.get_system_info()
 
         core_directories = CoreFileSystem.CoreDirectories
-        assets_folder = core_directories.get_assets_directory()
+        assets_folder = core_directories.get_assets_directory_path()
         icon_name = "Blank-256.ico"
         if system_info.is_linux():
                 icon_name = "Blank-256.xbm"
