@@ -35,7 +35,7 @@ class VideoDisplay:
         self._player.set_time(int(position))
     def get_current_frame_as_image(self):
         snapshot_name = str(CoreUUID.UUIDGenerator.generate_random_uuid())
-        path = CoreFileSystem.CoreDirectories.get_temporary_directory()
+        path = CoreFileSystem.CoreDirectories.get_temporary_directory_path()
         path = path.create_node(snapshot_name+".png")
         self._player.video_take_snapshot(0,path.get_os_path(),0,0)
         image = CoreImage.ImageFactory.create_from_file(path.get_os_path())
