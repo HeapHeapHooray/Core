@@ -9,6 +9,9 @@ try:
         third_party_path = CoreFileSystem.CoreDirectories.get_third_party_directory_path()
         vlc_path = third_party_path.create_node("Windows").create_node("VLC")
         os.add_dll_directory(vlc_path.get_os_path())
+        del vlc_path
+        del third_party_path
+    del system_info
 
     import vlc
 except:
