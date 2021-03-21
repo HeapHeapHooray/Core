@@ -27,4 +27,6 @@ class TCLRuntimeWindow:
         if system_info.is_windows():
                 self.window.iconbitmap(default=icon.get_os_path())
         else:
-                self.window.iconbitmap("@"+icon.get_os_path())
+                icon_path = icon.get_os_path()
+                self.window.iconbitmap("@"+icon_path)
+                self.window.iconmask("@"+icon_path)
